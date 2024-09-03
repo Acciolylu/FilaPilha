@@ -7,9 +7,9 @@ public class Fila {
     
     Queue<String> fila = new LinkedList<String>();
 
-	public void inserir(String nome) {
+	public void inserir(Processos p) {
 
-		fila.add(nome);
+		fila.add(p);
 
 	}
 

@@ -2,17 +2,19 @@ package estrutura;
 
 import java.util.Stack;
 
+import basica.Processos;
+
 public class Pilha {
 
-    Stack<String> pilha = new Stack<String>();
+    Stack<Processos> pilha = new Stack<Processos>();
 
-	public void inserirP(String nome) {
+	public void inserirP(Processos p) {
 
-		pilha.push(nome);
+		pilha.push(p);
 
 	}
 
-	public String pegarElemento() {
+	public Processos removerP() {
 
 		return pilha.pop();
 
@@ -20,12 +22,12 @@ public class Pilha {
 
 
 
-	public boolean verificaPilha() {
+	public boolean verificaP() {
 
 		return pilha.isEmpty();
 	}
 
-	public void mostrar() {
+	public void mostrarP() {
 
 		System.out.println(pilha.toString());
 

@@ -2,7 +2,7 @@ package basica;
 
 public class Processos {
 
-    private int pid;
+    private long pid;
     private String conteudo;
     
     public Processos() {
@@ -13,7 +13,7 @@ public class Processos {
         this.conteudo = conteudo;
     }
 
-    public int getPid() {
+    public long getPid() {
         return pid;
     }
 

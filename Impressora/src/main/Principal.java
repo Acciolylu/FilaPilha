@@ -2,43 +2,39 @@ package main;
 
 import basica.Processos;
 import estrutura.Fila;
+import estrutura.FilaLinked;
 import estrutura.Pilha;
 
 public class Principal {
 
     public static void main(String[] args) {
 
-         Fila buffer = new Fila(); 
+         FilaLinked buffer = new FilaLinked(); 
+         Pilha p = new Pilha();
 
     
-        buffer.inserir("Documento A");
-        buffer.inserir("Documento B");
-        buffer.inserir("Documento C");
+       Processos p1 = new Processos(2145, "DOCUMENTO A");
+       Processos p2 = new Processos(56785478, "DOCUMENTO B");
+       Processos p3 = new Processos(12490, "DOCUMENTO C");
+       Processos p4 = new Processos(34566, "DOCUMENTO D");
+
+
+       buffer.adicionar(p1);
+       buffer.adicionar(p2);
+       buffer.adicionar(p3);
+       buffer.adicionar(p4);
+
+       while (!buffer.verificar()){
+        p.inserirP(buffer.remover());
+       }
+
+       buffer.mostrar();
+
+
+
 
      
-		if(!buffer.verifica()) {
-			System.out.println("Lista com elementos");
-			System.out.println("====================");
-		}
-
-		buffer.mostrar();
-
-		System.out.println("====================");
-
-      
-        Pilha bufferP = new Pilha(); 
-
-      
-        bufferP.inserirP("Documento D");
-        bufferP.inserirP("Documento E");
-        bufferP.inserirP("Documento F");
-  
-
-        System.out.println("Pilha inicial:");
-        bufferP.pegarElemento(); 
-
-    
- 
+		
 }
 	
     }
